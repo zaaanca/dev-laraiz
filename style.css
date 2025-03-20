@@ -36,19 +36,29 @@ main {
     padding: 20px;
 }
 
-section#historia {
+section {
     background-color: white;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 
-footer {
-    background-color: #8B0000;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+h2 {
+    color: #8B0000;
+    border-bottom: 2px solid #8B0000;
+    padding-bottom: 10px;
+}
+
+.item {
+    margin-bottom: 20px;
+}
+
+.item h3 {
+    color: #8B0000;
+    margin-bottom: 10px;
+}
+
+.item p {
+    margin: 5px 0;
 }

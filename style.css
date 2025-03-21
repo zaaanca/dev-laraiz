@@ -271,7 +271,6 @@ iframe {
     background-color: #700000;
 }
 
-/* Ícone do Carrinho */
 #carrinho-icon {
     position: fixed;
     top: 20px;
@@ -305,11 +304,10 @@ iframe {
     font-size: 14px;
 }
 
-/* Carrinho Lateral */
 #carrinho-sidebar {
     position: fixed;
     top: 0;
-    right: -400px; /* Escondido inicialmente */
+    right: -400px;
     width: 400px;
     height: 100%;
     background-color: white;
@@ -321,7 +319,7 @@ iframe {
 }
 
 #carrinho-sidebar.aberto {
-    right: 0; /* Mostra o carrinho */
+    right: 0;
 }
 
 .carrinho-header {
@@ -406,7 +404,6 @@ iframe {
     background-color: #700000;
 }
 
-/* Overlay */
 #overlay {
     position: fixed;
     top: 0;
@@ -420,4 +417,110 @@ iframe {
 
 #overlay.mostrar {
     display: block;
+}
+
+#entrega {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Adicione estas regras ao seu arquivo CSS */
+
+#pagamento {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.opcoes-pagamento {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.opcoes-pagamento label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.opcao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border: 2px solid #8B0000;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.opcao:hover {
+    background-color: #f4f4f4;
+}
+
+.opcao img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.opcao span {
+    font-size: 16px;
+    color: #8B0000;
+}
+
+#dados-cartao {
+    margin-top: 20px;
+}
+
+#dados-cartao input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#qr-code-pix img {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    display: block;
+}
+
+.review-pedido {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.review-pedido h3 {
+    color: #8B0000;
+    margin-bottom: 15px;
+}
+
+#lista-pedido {
+    list-style-type: none;
+    padding: 0;
+}
+
+#lista-pedido li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+#total-pedido {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #8B0000;
 }

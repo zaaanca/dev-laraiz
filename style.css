@@ -271,6 +271,7 @@ iframe {
     background-color: #700000;
 }
 
+/* Ícone do Carrinho */
 #carrinho-icon {
     position: fixed;
     top: 20px;
@@ -279,14 +280,21 @@ iframe {
     display: flex;
     align-items: center;
     background-color: #8B0000;
-    padding: 10px;
-    border-radius: 50%;
+    padding: 10px 15px;
+    border-radius: 30px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+    z-index: 1000;
+}
+
+#carrinho-icon:hover {
+    background-color: #700000;
 }
 
 #carrinho-icon img {
-    width: 30px;
-    height: 30px;
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
 }
 
 #carrinho-contador {
@@ -295,5 +303,121 @@ iframe {
     border-radius: 50%;
     padding: 5px 10px;
     font-size: 14px;
-    margin-left: 10px;
+}
+
+/* Carrinho Lateral */
+#carrinho-sidebar {
+    position: fixed;
+    top: 0;
+    right: -400px; /* Escondido inicialmente */
+    width: 400px;
+    height: 100%;
+    background-color: white;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease-in-out;
+    z-index: 1001;
+    display: flex;
+    flex-direction: column;
+}
+
+#carrinho-sidebar.aberto {
+    right: 0; /* Mostra o carrinho */
+}
+
+.carrinho-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #8B0000;
+    color: white;
+}
+
+.carrinho-header h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+#fechar-carrinho {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#fechar-carrinho:hover {
+    color: #f4f4f4;
+}
+
+#carrinho-lista {
+    flex-grow: 1;
+    list-style-type: none;
+    padding: 20px;
+    margin: 0;
+    overflow-y: auto;
+}
+
+#carrinho-lista li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+#carrinho-lista li button {
+    background-color: #8B0000;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+#carrinho-lista li button:hover {
+    background-color: #700000;
+}
+
+.carrinho-footer {
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-top: 1px solid #ddd;
+}
+
+.carrinho-footer p {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+}
+
+.carrinho-footer button {
+    width: 100%;
+    background-color: #8B0000;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.carrinho-footer button:hover {
+    background-color: #700000;
+}
+
+/* Overlay */
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 1000;
+}
+
+#overlay.mostrar {
+    display: block;
 }

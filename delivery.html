@@ -8,7 +8,7 @@
 </head>
 <body>
     <header>
-        <h1>La Raiz de México</h1>
+        <h1>La Raíz de México</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Início</a></li>
@@ -369,6 +369,21 @@
             </div>
         </div>
     </footer>
+
+<div id="carrinho-sidebar">
+    <div class="carrinho-header">
+        <h2>Carrinho de Compras</h2>
+        <button id="fechar-carrinho">&times;</button>
+    </div>
+    <ul id="carrinho-lista"></ul>
+    <div class="carrinho-footer">
+        <p id="carrinho-total">Total: R$ 0,00</p>
+        <button onclick="finalizarCompra()">Finalizar Compra</button>
+    </div>
+</div>
+
+<div id="overlay"></div>
+
     <script src="script.js"></script>
 </body>
 </html>

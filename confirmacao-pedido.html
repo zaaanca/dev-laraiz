@@ -81,18 +81,18 @@
             if (carrinho.length === 0) {
                 listaPedido.innerHTML = '<li>Nenhum item no pedido.</li>';
                 totalPedido.textContent = 'Total: R$ 0,00';
-                return;
+            } else {
+                let totalValor = 0;
+                carrinho.forEach(item => {
+                    const li = document.createElement('li');
+                    li.textContent = `${item.nome} - R$ ${item.preco.toFixed(2)}`;
+                    listaPedido.appendChild(li);
+                    totalValor += item.preco;
+                });
+                totalPedido.textContent = `Total: R$ ${totalValor.toFixed(2)}`;
             }
 
-            let totalValor = 0;
-            carrinho.forEach(item => {
-                const li = document.createElement('li');
-                li.textContent = `${item.nome} - R$ ${item.preco.toFixed(2)}`;
-                listaPedido.appendChild(li);
-                totalValor += item.preco;
-            });
-
-            totalPedido.textContent = `Total: R$ ${totalValor.toFixed(2)}`;
+            localStorage.removeItem('carrinho');
         });
     </script>
 </body>
